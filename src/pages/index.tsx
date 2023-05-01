@@ -26,7 +26,10 @@ const Home: NextPage = () => {
         {/* <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" /> */}
         <div>
           {data?.map((post) => (
-            <div key={post.id}>{post.content}</div>
+            <div
+              dangerouslySetInnerHTML={{ __html: post.content }}
+              key={post.id}
+            />
           ))}
         </div>
       </main>
