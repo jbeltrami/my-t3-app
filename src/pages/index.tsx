@@ -56,7 +56,10 @@ const PostVIew = (props: PostWithUser) => {
           <span>·</span>
           <span className="font-thin">{dayjs(post.createdAt).fromNow()}</span>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div
+          className="text-2xl"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
       </div>
     </div>
   );
